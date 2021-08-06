@@ -17,7 +17,6 @@ int	is_square(char *map_file)
 	gnl = get_next_line(fd);
 	while (gnl)
 	{
-		ft_putstr(gnl);
 		if (gnl[ft_strlen(gnl) - 1] == '\n')
 			last_l_size = ft_strlen(gnl) - 1;
 		else
@@ -37,7 +36,7 @@ int	is_square(char *map_file)
 	return (0);
 }
 
-int		is_zero(char *map_file)
+int	is_zero(char *map_file)
 {
 	int		fd;
 	char	*gnl;
@@ -55,7 +54,7 @@ int		is_zero(char *map_file)
 			while (gnl[i])
 			{
 				if (gnl[i] == '0')
-					zero++; 
+					zero++;
 				i++;
 			}
 		}
@@ -66,7 +65,7 @@ int		is_zero(char *map_file)
 	return (0);
 }
 
-int		is_close(char *map_file)
+int	is_close(char *map_file)
 {
 	int		fd;
 	char	*gnl;
@@ -84,9 +83,7 @@ int		is_close(char *map_file)
 	while (gnl)
 	{
 		if (gnl[0] != '1' || gnl[ft_strlen(gnl) - 2] != '1')
-		{
 			return (1);
-		}
 		if (gnl[ft_strlen(gnl) - 1] != '\n')
 		{
 			i = 0;
@@ -106,17 +103,17 @@ int	check_map(char *map_file)
 {
 	/*if (is_square(map_file))
 	{
-		printf("\nMap is not rectangular.\n");
+		ft_putstr("\nMap is not rectangular.\n");
 		return (1);
 	}*/
 	if (is_close(map_file))
 	{
-		printf("\nMap is not closed.\n");
+		ft_putstr("\nMap is not closed.\n");
 		return (1);
 	}
 	if (is_zero(map_file))
 	{
-		printf("\nNot enough space in map.\n");
+		ft_putstr("\nNot enough space in map.\n");
 		return (1);
 	}
 	if (is_inv_char(map_file))

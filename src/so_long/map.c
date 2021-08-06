@@ -41,7 +41,6 @@ void	parse_map(t_game *game, char *map_file)
 				if (gnl[i] == 'C')
 					game->nb_collect++;
 				game->map[x][y] = gnl[i];
-				printf("game->map[%d][%d] = %c;\n", x, i, game->map[x][i]);
 				y++;
 			}
 			else

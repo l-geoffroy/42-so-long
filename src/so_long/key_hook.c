@@ -3,7 +3,6 @@
 
 int	keyhook(int keycode, t_game *game)
 {
-	printf("%d\n", keycode);
 	if (keycode == 123)
 		move_player_left(game);
 	else if (keycode == 124)
@@ -15,10 +14,6 @@ int	keyhook(int keycode, t_game *game)
 	else if (keycode == 126)
 		move_player_top(game);
 	else if (keycode == 53)
-	{	
-		printf("Exit.\n");
 		exit_game(game);
-	}
-	(void)game;
 	return (0);
 }

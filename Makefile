@@ -6,7 +6,7 @@
 #    By: lgeoffro <lgeoffro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 16:21:12 by lgeoffro          #+#    #+#              #
-#    Updated: 2021/07/29 19:01:47 by lgeoffro         ###   ########.fr        #
+#    Updated: 2021/08/06 14:06:43 by lgeoffro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SOLONG_SRC = src/so_long/main.c \
 			 src/so_long/key_hook.c \
 			 src/so_long/player.c \
 			 src/so_long/checker2.c \
-			 src/so_long/animations.c \
+			 src/so_long/load_tex.c \
 
 SOLONG_OBJ = $(SOLONG_SRC:.c=.o)
 
